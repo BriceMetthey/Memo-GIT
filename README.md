@@ -1,5 +1,5 @@
 # Memo-GIT
-Mémo sur Git.
+
 
 
 git stash

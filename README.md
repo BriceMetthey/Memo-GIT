@@ -12,10 +12,14 @@ https://www.atlassian.com/git/tutorials/setting-up-a-repository
 Activer la couleur dans Git
 
 git config --global color.diff auto
+
 git config --global color.status auto
+
 git config --global color.branch auto
 
+
 git config --global user.name "votre_pseudo"
+
 git config --global user.email moi@email.com
 
 vim ~/.gitconfig
@@ -40,8 +44,7 @@ git add <file>
 
 git add <directory>
 
-git add -p
-=> commit par portions
+git add -p => commit par portions
 
 
 La commande capture un instantané des modifications actuelles :
@@ -63,6 +66,7 @@ git status
 Comment mettre à jour (modifier) un commit ?
 
 git add hello.py
+
 git commit --amend
 
 
@@ -70,6 +74,7 @@ git commit --amend
 
 Comparaison des changements :
 
+```
 mkdir diff_test_repo
 cd diff_test_repo
 touch diff_test.txt
@@ -84,7 +89,7 @@ echo "this is a diff example" > diff_test.txt
 git diff
 
 git diff --color-words
-
+```
 
 ## Les branches
 
@@ -109,10 +114,10 @@ git branch -a     => Liste toutes les branches distantes
 
 
 Comparaison de 2 ou n branches : 
-
+```
 git diff branch1..other-feature-branch
 git diff branch1 branch2
-
+```
 
 Comparaison de fichiers entre 2 branches
 
@@ -142,6 +147,7 @@ Ex: git checkout master
 2/ Fetch latest remote commits
 
 Execute git fetch to pull the latest remote commits. 
+
 Once the fetch is completed ensure the master branch has the latest updates by executing git pull
 
 
@@ -152,6 +158,7 @@ git merge <branch name> => where <branch name> is the name of the branch that wi
 
 ## Merge 1
 
+```
 # Start a new feature
 git checkout -b new-feature master
 # Edit some files
@@ -164,13 +171,14 @@ git commit -m "Finish a feature"
 git checkout master
 git merge new-feature
 git branch -d new-feature
-
+```
 
 
 
 ## Merge 2
 
 Demarre une nouvelle branche et passe sur cette nouvelle branche
+```
 git checkout -b new-feature master
 # Edit some files
 git add <file>
@@ -186,10 +194,11 @@ git commit -m "Make some super-stable changes to master"
 # Merge in the new-feature branch
 git merge new-feature
 git branch -d new-feature
-
+```
 
 ## Les conflits
 
+```
 $ mkdir git-merge-test
 $ cd git-merge-test
 $ git init .
@@ -200,22 +209,24 @@ $ git commit -am "we are commiting the inital content"
 $ git checkout -b new_branch_to_merge_later
 $ echo "totally different content to merge later" > merge.txt
 $ git commit -am"edited the content of merge.txt to cause a conflict"
-
+```
+```
 git checkout master
 Switched to branch 'master'
 echo "content to append" >> merge.txt
 git commit -am "appended content to merge.txt"
 [master 24fbe3c] appended content to merge.tx
 1 file changed, 1 insertion(+)
+```
 
-
+```
 $ git merge new_branch_to_merge_later
 Auto-merging merge.txt
 CONFLICT (content): Merge conflict in merge.txt
 Automatic merge failed; fix conflicts and then commit the result.
+```
 
-
-
+```
 $ git status
 On branch master
 You have unmerged paths.
@@ -226,10 +237,10 @@ Unmerged paths:
 (use "git add <file>..." to mark resolution)
 
 both modified:   merge.txt
+```
 
 
-
-
+```
 $ cat merge.txt
 <<<<<<< HEAD
 this is some content to mess with
@@ -237,15 +248,16 @@ content to append
 =======
 totally different content to merge later
 >>>>>>> new_branch_to_merge_later
-
+```
 
 ## Résoudre le conflit manuellement
 
 1/ Je modifie merge.txt
+
 2/ git add merge.txt
+
 3/ git commit -m "merged and resolved the conflict in merge.txt"
 
-➜  
 [master 93ae695] merged and resolved the conflict in merge.txt
 
 
@@ -275,7 +287,7 @@ git reset    => réinitialiser les fichiers en conflit à un état fonctionnel c
 
 https://www.atlassian.com/fr/git/tutorials/comparing-workflows/feature-branch-workflow
 
-
+```
 Push an existing folder
 cd existing_folder
 git init
@@ -283,12 +295,15 @@ git remote add origin git@gitlab.com:bxxx.xxxx.com/my-app.git
 git add .
 git commit -m "Initial commit"
 git push -u origin master
-
+```
 
 Commencez par la branche master.
 
+
 git checkout master
+
 git fetch origin                 ==> récupère tout ajout qui a été poussé vers ce dépôt depuis que vous l’avez cloné ou la dernière fois que vous avez récupéré les ajouts
+
 git reset --hard origin/master   ==>  jetez tous mes changements locaux, oubliez tout sur ma branche locale actuelle et mettez tous comme sur la branche master du depot distant.
 
 
@@ -300,10 +315,11 @@ git checkout -b post-model
 
 Mettez à jour, ajoutez, commitez et pushez des changements
 
+```
 git status
 git add <some-file>
 git commit
-
+```
 
 
 Pushez la branche de fonctionnalité vers le dépôt distant
@@ -319,7 +335,9 @@ Pour obtenir du feedback sur la nouvelle branche de fonctionnalité, créez une 
 Résolvez du feedback
 
 Désormais, les membres de l'équipe commentent et approuvent les commits pushés.
+
 Résolvez les commentaires en local, commitez, puis faites un push des changements suggérés.
+
 Vos mises à jour apparaissent dans la pull request.
 
 
@@ -327,12 +345,14 @@ Vos mises à jour apparaissent dans la pull request.
 Mergez votre pull request
 
 Avant de faire un merge, vous devrez peut-être résoudre des conflits de merge si d'autres ont apporté des changements au dépôt. Une fois votre pull request approuvée et exempte de conflit, vous pouvez ajouter votre code à la branche principale (master).
+
 Faites un merge à partir de la pull request
 
+```
 git merge post-model
 git status
 git push -u origin master
-
+```
 
 
 

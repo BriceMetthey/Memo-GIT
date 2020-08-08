@@ -42,6 +42,7 @@ Indexer les modifications qui ont été faites dans les fichiers du répertoire 
 * `git add -u` : Stages only Modified Files
 * `git add .` : Stages everything, without Deleted Files
 
+With git version 2.0, `git add .` also records file removals.
 
 git add -p => commit par portions
 

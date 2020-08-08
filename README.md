@@ -38,11 +38,10 @@ git init
 
 Indexer les modifications qui ont été faites dans les fichiers du répertoire de travail 
 
-git add -A ou git add .
+* `git add -A` : Stages Everything
+* `git add -u` : Stages only Modified Files
+* `git add .` : Stages everything, without Deleted Files
 
-git add <file>
-
-git add <directory>
 
 git add -p => commit par portions
 

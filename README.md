@@ -31,12 +31,12 @@ git config user.name
 
 ## Initialiser git
 
-git init
+`git init`
 
 
 ## Indexer et valider
 
-Indexer les modifications qui ont été faites dans les fichiers du répertoire de travail 
+Indexer les modifications qui ont été faites dans les fichiers du répertoire de travail :
 
 * `git add -A` : Stages Everything
 * `git add -u` : Stages only Modified Files
@@ -44,30 +44,32 @@ Indexer les modifications qui ont été faites dans les fichiers du répertoire 
 
 With git version 2.0, `git add .` also records file removals.
 
-git add -p => commit par portions
+Commiter par portions : 
+
+`git add -p`
 
 
-La commande capture un instantané des modifications actuelles :
+Capturer un instantané des modifications actuelles :
 
-git commit
+`git commit`
 
-=> Lancera un éditeur de texte vous invitant pour un message de validation. Une fois que vous avez entré un message : enregistrez et fermez pour créer la validation réelle.
+Lancera un éditeur de texte vous invitant pour un message de validation. Une fois que vous avez entré un message : enregistrez et fermez pour créer la validation réelle.
+
+Capturer un instantané avec directement le message :
+
+`git commit -m "Initial commit" `
 
 
-git commit -m "Initial commit"
+Afficher l’état du répertoire de travail et la zone de transit :
 
-
-Affiche l’état du répertoire de travail et la zone de transit.
-
-git status
-
+`git status`
 
 
 Comment mettre à jour (modifier) un commit ?
 
-git add hello.py
+`git add hello.py`
 
-git commit --amend
+`git commit --amend`
 
 
 ## Comparaisons

@@ -358,9 +358,6 @@ git push -u origin master
 
 
 
-
-
-
 Utilisation des pull requests
 
 1. 1 dév crée la fonctionnalité dans une branche dédiée (dépôt local)
@@ -377,14 +374,16 @@ Le mainteneur de projet fait un merge de la fonctionnalité dans le dépôt offi
 
 ## Cas spécifique : Oublie de création d'une nouvelle branche
 
-`git stash`
+```
+git stash
 
-`git checkout -b feature/transfert-order`
+git checkout -b feature/transfert-order
 
-`git stash pop`
+git stash pop
 
-`git add .`
+git add .
 
-`git commit -m "Add Transfert Order features" `
+git commit -m "Add Transfert Order features" 
 
-`git push origin feature/transfert-order`
+git push origin feature/transfert-order
+```

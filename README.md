@@ -358,9 +358,9 @@ git push -u origin master
 
 
 
-Utilisation des pull requests
+## Scénario d'utilisation des pull requests
 
-1. 1 dév crée la fonctionnalité dans une branche dédiée (dépôt local)
+1. Le développeur crée la fonctionnalité dans une branche dédiée (dépôt local)
 
 2. Il fait un push de la branche vers un dépôt public
 

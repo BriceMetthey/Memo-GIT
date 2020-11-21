@@ -4,11 +4,11 @@
 
 ## References
 
-[Tuto didactique](https://learngitbranching.js.org/?locale=fr_FR)
+- [Tuto didactique](https://learngitbranching.js.org/?locale=fr_FR)
 
-[Article developpez]https://loic-guibert.developpez.com/tutoriels/git/get-started/
+- [Article developpez](https://loic-guibert.developpez.com/tutoriels/git/get-started/)
 
-[Article atlassian]https://www.atlassian.com/git/tutorials/setting-up-a-repository
+- [Article atlassian](https://www.atlassian.com/git/tutorials/setting-up-a-repository)
 
 
 ## Configurer git

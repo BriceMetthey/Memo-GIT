@@ -318,6 +318,10 @@ Le seul problème est que master n'a pas été mis à jour, faisons cela mainten
 
 Nous sommes désormais positionnés sur la branche master. Continuons en faisant le rebase sur bugFix… Et voilà ! Puisque master était un ascendant de bugFix, git a simplement déplacé la référence de la branche master en avant dans le temps.
 
+`git rebase bugFix`
+
+![](rebase-3.png) deviens : ![](rebase-4.png)
+
 
 ## Workflow de branche de fonctionnalité Git
 

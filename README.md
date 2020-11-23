@@ -99,24 +99,31 @@ git diff --color-words
 
 ## Les branches
 
-git branch  => Liste toutes les branches   ou   git branch --list
+Lister les branches existantes en local :
 
-git branch <branch>   => Créé une nouvelle branche appelée <branch>
+`git branch`
 
-Attention : ne fait que créer une nouvelle branche. 
-Par ajouter des nouveaux commits : selectionner la branche via :
+Lister les branches distantes :
 
-git checkout + nom de la branche, 
+`git branch -r`
 
-Puis utiliser les commandes git add   et   git commit  
+Lister les branches locales + distantes :
+
+`git branch -a`
 
 
+Créer une nouvelle branche  :
 
-git branch -d <branch>  => detruit la branche spécifiée
+`git checkout -b my-branch-name`
 
-git branch -m <branch>  => Renomme la branche courante
 
-git branch -a     => Liste toutes les branches distantes
+Detruit la branche spécifiée :
+
+`git branch -d nom_branche`
+
+Renomme 1 branche courante :
+
+`git branch –m old-name new-name`
 
 
 Comparaison de 2 ou n branches : 
@@ -132,7 +139,7 @@ git diff master new_branch ./diff_test.txt
 
 ## git checkout
 
-git checkout <Nom de la branche>
+`git checkout nom_branche`
 
 Permet la navigation entre les branches
 
@@ -145,24 +152,25 @@ https://www.atlassian.com/git/tutorials/using-branches/git-merge
 
 1/ On se positionne sur la branche qui va recevoir le Merge
 
-git checkout <receiving> => to switch to the receiving branch
+`git checkout nom_branche`
 
-Ex: git checkout master
-
-
-2/ Fetch latest remote commits
-
-Execute git fetch to pull the latest remote commits. 
-
-Once the fetch is completed ensure the master branch has the latest updates by executing git pull
+Ex: `git checkout master`
 
 
-3/ Merging
+2/ Recuperer les dernier commits distants
 
-git merge <branch name> => where <branch name> is the name of the branch that will be merged into the receiving branch.
+Execute `git fetch` pour rapatrier les derniers commits récents. 
+
+4/ `git pull`
+
+5/ Merging
+
+`git merge nom_branche` 
+
+=> nom_branche est le nom de la branche qui va etre mergé dans la branche de reception.
 
 
-## Merge 1
+Exemple 1 de Merge :
 
 ```
 # Start a new feature
@@ -181,7 +189,7 @@ git branch -d new-feature
 
 
 
-## Merge 2
+Exemple 2 de Merge :
 
 Demarre une nouvelle branche et passe sur cette nouvelle branche
 ```
@@ -202,7 +210,7 @@ git merge new-feature
 git branch -d new-feature
 ```
 
-## Les conflits
+## Les conflits de Merge
 
 ```
 $ mkdir git-merge-test

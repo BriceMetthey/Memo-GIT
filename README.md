@@ -307,7 +307,7 @@ Transférer notre travail de la branche 'bugFix' directement sur le travail exis
 
 `git rebase master`
 
-![](rebase-2.png =125x) deviens : ![](rebase-2.png =125x)
+![](rebase-2.png) deviens : ![](rebase-2.png)
 
 
 Désormais, le travail de la branche 'bugFix' est juste en haut de la branche 'master' et nous avons une belle séquence linéaire de commits.

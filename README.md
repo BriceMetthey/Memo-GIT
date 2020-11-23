@@ -150,6 +150,8 @@ Faire un git checkout sur une branche mets à jour le repertoire et dit à Git d
 
 https://www.atlassian.com/git/tutorials/using-branches/git-merge
 
+Faire un 'merge' avec Git crée un commit spécial qui a deux parents.
+
 1/ On se positionne sur la branche qui va recevoir le Merge
 
 `git checkout nom_branche`

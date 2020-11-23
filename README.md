@@ -314,6 +314,7 @@ Désormais, le travail de la branche 'bugFix' est juste en haut de la branche 'm
 
 Notez que le commit C3 existe toujours quelque part (il est en grisé sur l'arbre), et C3' est la "copie" que nous avons créée sur master avec rebase.
 
+Le seul problème est que master n'a pas été mis à jour, faisons cela maintenant…
 
 Nous sommes désormais positionnés sur la branche master. Continuons en faisant le rebase sur bugFix… Et voilà ! Puisque master était un ascendant de bugFix, git a simplement déplacé la référence de la branche master en avant dans le temps.
 

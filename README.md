@@ -18,22 +18,20 @@ https://www.gitkraken.com/git-client
 
 Activer la couleur dans Git
 
-git config --global color.diff auto
+`git config --global color.diff auto`
 
-git config --global color.status auto
+`git config --global color.status auto`
 
-git config --global color.branch auto
+`git config --global color.branch auto`
 
+`git config --global user.name "votre_pseudo"`
 
-git config --global user.name "votre_pseudo"
+`git config --global user.email moi@email.com`
 
-git config --global user.email moi@email.com
+`vim ~/.gitconfig`
 
-vim ~/.gitconfig
+`git config --list --show-origin`
 
-git config --list --show-origin
-
-git config user.name
 
 
 ## Initialiser git
@@ -41,7 +39,7 @@ git config user.name
 `git init`
 
 
-## Indexer et valider
+## Indexer
 
 Indexer les modifications qui ont été faites dans les fichiers du répertoire de travail :
 
@@ -49,18 +47,11 @@ Indexer les modifications qui ont été faites dans les fichiers du répertoire 
 * `git add -u` : Stages only Modified Files
 * `git add .` : Stages everything, without Deleted Files
 
-With git version 2.0, `git add .` also records file removals.
-
-Commiter par portions : 
-
-`git add -p`
+Depuis Git 2.0, `git add .` enregistre aussi les fichiers supprimés.
 
 
-Capturer un instantané des modifications actuelles :
+## Capturer un instantané
 
-`git commit`
-
-Lancera un éditeur de texte vous invitant pour un message de validation. Une fois que vous avez entré un message : enregistrez et fermez pour créer la validation réelle.
 
 Capturer un instantané avec directement le message :
 

@@ -68,9 +68,13 @@ Afficher l’état du répertoire de travail et la zone de transit :
 `git commit --amend`
 
 Permet de modifier le commit le + récent.
+
 Permet de combiner les changements stagés avec l'ancien commit au lieu de créer un commit totalement nouveau.
+
 Peut être utilisé pour modifier le message de commit sans changer son instantané.
+
 La modif. ne se contente pas de changer le dernier commit : elle le remplace totalement
+
 
 ## Comparaisons
 

@@ -10,6 +10,8 @@
 
 - [Article atlassian](https://www.atlassian.com/git/tutorials/setting-up-a-repository)
 
+- [Bonne pratique : Gitflow](https://www.atlassian.com/fr/git/tutorials/comparing-workflows/gitflow-workflow)
+
 ## Client Git
 
 https://www.gitkraken.com/git-client

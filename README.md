@@ -12,6 +12,8 @@
 
 - [Bonne pratique : Gitflow](https://www.atlassian.com/fr/git/tutorials/comparing-workflows/gitflow-workflow)
 
+- [Résoudre votre problème](https://ohshitgit.com/fr)
+
 ## Client Git
 
 https://www.gitkraken.com/git-client

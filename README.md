@@ -14,6 +14,9 @@
 
 - [Résoudre votre problème](https://ohshitgit.com/fr)
 
+- [Fiche avec toutes les commandes utiles](https://rogerdudler.github.io/git-guide/index.fr.html)
+
+
 ## Client Git
 
 https://www.gitkraken.com/git-client

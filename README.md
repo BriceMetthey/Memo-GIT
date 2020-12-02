@@ -116,7 +116,7 @@ Lister les branches distantes :
 
 Lister les branches locales + distantes :
 
-`git branch -a`
+`git branch -a` ou `git remote show origin`
 
 
 Créer une nouvelle branche  :

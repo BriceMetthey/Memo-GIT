@@ -17,9 +17,6 @@
 - [Fiche avec toutes les commandes utiles](https://rogerdudler.github.io/git-guide/index.fr.html)
 
 
-## Client Git
-
-https://www.gitkraken.com/git-client
 
 ## Configurer git
 
@@ -310,24 +307,6 @@ La seconde façon de combiner les contenus de deux branches est rebase.
 
 Rebase prend un ensemble de commits, les "recopie", et les ajoute en bout de chaîne à un autre endroit.
 
-Transférer notre travail de la branche 'bugFix' directement sur le travail existant dans 'master' :
-
-`git rebase master`
-
-![](rebase-1.png) deviens : ![](rebase-2.png)
-
-
-Désormais, le travail de la branche 'bugFix' est juste en haut de la branche 'master' et nous avons une belle séquence linéaire de commits.
-
-Notez que le commit C3 existe toujours quelque part (il est en grisé sur l'arbre), et C3' est la "copie" que nous avons créée sur master avec rebase.
-
-Le seul problème est que master n'a pas été mis à jour, faisons cela maintenant…
-
-Nous sommes désormais positionnés sur la branche master. Continuons en faisant le rebase sur bugFix… Et voilà ! Puisque master était un ascendant de bugFix, git a simplement déplacé la référence de la branche master en avant dans le temps.
-
-`git rebase bugFix`
-
-![](rebase-3.png) deviens : ![](rebase-4.png)
 
 
 ## Workflow de branche de fonctionnalité Git
